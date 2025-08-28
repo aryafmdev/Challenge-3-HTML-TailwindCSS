@@ -85,9 +85,3 @@ npm run dev
 3. Commit perubahan (`git commit -m "Menambahkan fitur xyz"`)
 4. Push branch (`git push origin feature-xyz`)
 5. Buat Pull Request
-
----
-
-## 📜 License
-
-Project ini menggunakan lisensi **MIT** (atau sesuaikan).
