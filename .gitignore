@@ -1,2 +1,5 @@
 node_modules
 .vscode
+src/css/output.css
+package-lock.json
+.DS_Store
