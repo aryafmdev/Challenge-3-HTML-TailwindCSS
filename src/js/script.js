@@ -1,12 +1,12 @@
-// // Navbar Fixed
-// window.onscroll = function () {
-//   const header = document.querySelector('header');
-//   const fixedNav = header.offsetTop;
+// Navbar Fixed
+window.onscroll = function () {
+  const header = document.querySelector('header');
+  const fixedNav = header.offsetTop;
 
-//   if (window.pageYOffset > fixedNav) {
-//     header.classList.add('navbar-fixed');
-//   }
-// };
+  if (window.pageYOffset > fixedNav) {
+    header.classList.add('navbar-fixed');
+  }
+};
 
 // Close menu on escape key
 document.addEventListener('keydown', function (e) {
@@ -46,8 +46,23 @@ function closeMobileMenu() {
 
   setTimeout(() => {
     overlay.classList.add('hidden');
-  }, 300);
+  }, 30);
 
   isMobileMenuOpen = false;
 }
 
+const input = document.querySelector('.input');
+
+function toggleTextHelper() {
+  const texthelper = document.querySelectorAll('.err-text-helper');
+  for (let i = 0; i < texthelper.length; i++) {
+    texthelper[i].classList.toggle('hidden');
+    // texthelper[i].classList.add('hidden');
+  }
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.key === 'c') {
+    toggleTextHelper();
+  }
+});

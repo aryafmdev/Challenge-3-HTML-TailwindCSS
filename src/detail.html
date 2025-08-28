@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Page</title>
     <link rel="stylesheet" href="./css/output.css" />
-    <!-- <style>
-      body * {
-        border: 1px solid yellow;
-      }
-    </style> -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Header Start -->
@@ -28,7 +24,7 @@
                 class="w-10 h-10 mr-2"
               />
               <a
-                href="#home"
+                href="index.html"
                 class="font-bold text-text-lg text-neutral-950 py-5 lg:text-display-xs"
                 >Shirt</a
               >
@@ -36,25 +32,26 @@
             <!-- Search Container -->
             <div class="flex items-center space-x-4">
               <!-- Catalog Button -->
-              <button
-                class="flex items-center space-x-2 px-2 py-2 text-gray-700 hover:text-gray-900 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors duration-200"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <a href="catalog.html">
+                <button
+                  class="flex items-center space-x-2 px-2 py-2 text-gray-700 hover:text-gray-900 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-                <span class="text-text-sm text-neutral-950">Catalog</span>
-              </button>
-
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                    />
+                  </svg>
+                  <span class="text-text-sm text-neutral-950">Catalog</span>
+                </button>
+              </a>
               <!-- Search Bar -->
               <div class="relative flex-1 max-w-lg">
                 <div
@@ -338,41 +335,41 @@
 
       <div class="lg:grid lg:grid-cols-[1fr_2fr]">
         <!-- Main Image Container -->
-        <div class="max-w-md mx auto">
+        <div class="mx auto">
           <!-- main image -->
           <div class="relative">
             <img
-              src="/assets/images/products/sneakers_court_minimalis.png"
+              src="../assets/images/products/sneakers_court_minimalis.png"
               alt="sneakers_court_minimalis"
-              class="w-full rounded-lg"
+              class="w-full rounded-xl"
             />
           </div>
           <!-- Thumbnails -->
-          <div class="flex gap-1 mt-2 overflow-hidden">
+          <div class="flex gap-2 mt-2 overflow-hidden">
             <img
-              src="/assets/images/products/sneakers-thumbnail-1.png"
+              src="../assets/images/products/sneakers-thumbnail-1.png"
               alt="sneakers-thumbnail-1"
-              class="w-1/5 h-1/5 rounded-lg cursor-pointer"
+              class="w-1/5 h-1/5 rounded-xl cursor-pointer"
             />
             <img
-              src="/assets/images/products/sneakers-thumbnail-2.png"
+              src="../assets/images/products/sneakers-thumbnail-2.png"
               alt="sneakers-thumbnail-2"
-              class="w-1/5 h-1/5 rounded-lg cursor-pointer"
+              class="w-1/5 h-1/5 rounded-xl cursor-pointer"
             />
             <img
-              src="/assets/images/products/sneakers-thumbnail-3.png"
+              src="../assets/images/products/sneakers-thumbnail-3.png"
               alt="sneakers-thumbnail-3"
-              class="w-1/5 h-1/5 rounded-lg cursor-pointer"
+              class="w-1/5 h-1/5 rounded-xl cursor-pointer"
             />
             <img
-              src="/assets/images/products/sneakers-thumbnail-4.png"
+              src="../assets/images/products/sneakers-thumbnail-4.png"
               alt="sneakers-thumbnail-4"
-              class="w-1/5 h-1/5 rounded-lg cursor-pointer"
+              class="w-1/5 h-1/5 rounded-xl cursor-pointer"
             />
             <img
-              src="/assets/images/products/sneakers-thumbnail-5.png"
+              src="../assets/images/products/sneakers-thumbnail-5.png"
               alt="sneakers-thumbnail-5"
-              class="w-1/5 h-1/5 rounded-lg cursor-pointer"
+              class="w-1/5 h-1/5 rounded-xl cursor-pointer"
             />
           </div>
         </div>
@@ -445,22 +442,22 @@
               >
                 -
               </button>
-              <input
-                type="number"
-                value="2"
-                class="w-12 text-center text-md py-2 border-t border-b border-gray-300"
-              />
+              <button class="border-t border-b border-gray-300 px-4 py-2">
+                2
+              </button>
               <button
                 class="border-t border-r border-b border-gray-300 px-4 py-2 rounded-r-xl"
               >
                 +
               </button>
             </div>
-            <button
-              class="bg-black text-white mt-3 py-2 px-6 rounded-md font-semibold w-full lg:w-2/5"
-            >
-              + Add to Cart
-            </button>
+            <a href="cart.html" class="href">
+              <button
+                class="bg-black text-white mt-3 py-2 px-6 rounded-md font-semibold w-full lg:w-2/5"
+              >
+                + Add to Cart
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -475,7 +472,7 @@
       <div class="grid grid-cols-2 gap-4 mt-4 lg:grid-cols-4">
         <div class="max-w-sm rounded-lg bg-white shadow-md overflow-hidden">
           <img
-            src="/assets/images/products/overshirt_utility.png"
+            src="../assets/images/products/overshirt_utility.png"
             alt="overshirt-utility"
             class="w-full h-auto rounded-lg"
           />
@@ -489,7 +486,7 @@
         </div>
         <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
           <img
-            src="/assets/images/products/sweater_rajut_cable.png"
+            src="../assets/images/products/sweater_rajut_cable.png"
             alt="sweater-rajut-cable"
             class="w-full h-auto rounded-lg"
           />
@@ -503,7 +500,7 @@
         </div>
         <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
           <img
-            src="/assets/images/products/syal_wol_kotak.png"
+            src="../assets/images/products/syal_wol_kotak.png"
             alt="syal_wol_kotak"
             class="w-full h-auto rounded-lg"
           />
@@ -517,7 +514,7 @@
         </div>
         <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
           <img
-            src="/assets/images/products/syal_wol_solid.png"
+            src="../assets/images/products/syal_wol_solid.png"
             alt="syal_wol_solid"
             class="w-full h-auto rounded-lg"
           />

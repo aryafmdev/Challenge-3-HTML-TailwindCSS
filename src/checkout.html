@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Page</title>
     <link rel="stylesheet" href="./css/output.css" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Header Start -->
     <header class="bg-transparent top-0 left-0 w-full flex items-center z-10">
       <!-- Desktop Header -->
       <div class="hidden md:block w-full">
-        <div class="px-4 sm:px-6 md:px-10 lg:px-20 shadow-lg">
+        <div class="px-4 sm:px-6 md:px-10 lg:px-22 shadow-lg">
           <div class="flex items-center justify-between h-21">
             <!-- Logo -->
-            <div class="px-4 w-20 flex flex-nowrap items-center">
+            <div class="pr-4 w-20 flex flex-nowrap items-center">
               <img
                 src="../assets/images/Logo.png"
                 alt="Logo"
                 class="w-10 h-10 mr-2"
               />
               <a
-                href="#home"
+                href="index.html"
                 class="font-bold text-text-lg text-neutral-950 py-5 lg:text-display-xs"
                 >Shirt</a
               >
@@ -29,24 +30,26 @@
             <!-- Search Container -->
             <div class="flex items-center space-x-4">
               <!-- Catalog Button -->
-              <button
-                class="flex items-center space-x-2 px-2 py-2 text-gray-700 hover:text-gray-900 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors duration-200"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <a href="catalog.html">
+                <button
+                  class="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-gray-900 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-                <span class="text-text-sm text-neutral-950">Catalog</span>
-              </button>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                    />
+                  </svg>
+                  <span class="text-text-sm text-neutral-950">Catalog</span>
+                </button>
+              </a>
 
               <!-- Search Bar -->
               <div class="relative flex-1 max-w-lg">
@@ -71,7 +74,7 @@
                   type="text"
                   placeholder="Search"
                   id="desktop-search"
-                  class="block pl-10 pr-3 py-3 border border-gray-300 rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm xl:w-150 lg:w-110 md:w-70 sm:w-50"
+                  class="block pl-10 pr-3 py-3 border border-gray-300 rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-text-sm placeholder:lg:text-text-md xl:w-140 lg:w-80 md:w-60 sm:w-50"
                 />
               </div>
             </div>
@@ -100,12 +103,12 @@
                 <span
                   id="cart-badge"
                   class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
-                  >1</span
+                  >6</span
                 >
               </button>
               <!-- User -->
               <button
-                class="flex items-center space-x-2 px-4 w-50 py-2 text-gray-700 rounded-xl border border-gray-300"
+                class="flex items-center space-x-2 px-4 lg:w-50 md:40 py-2 text-gray-700 rounded-xl border border-gray-300"
               >
                 <svg
                   width="18"
@@ -320,15 +323,333 @@
     <!-- Mobile Menu Overlay End -->
 
     <!-- Header End -->
+
     <!-- Checkout Start -->
-    <section id="checkout" class="px-4 py-4 lg:px-23">
+    <section id="checkout" class="px-4 pt-6 pb-12 lg:px-23 bg-neutral-50">
       <h2 class="text-display-xs font-bold lg:text-display-md">Checkout</h2>
+      <form action="">
+        <div class="lg:flex lg:justify-between lg:space-x-5">
+          <div
+            class="bg-base-white checkout-form mt-5 rounded-2xl shadow-sm border border-neutral-100 lg:col-span-2 lg:w-[70%]"
+          >
+            <div class="p-3 mt-3">
+              <h3 class="text-text-md lg:text-text-lg font-bold">
+                Shipping Address
+              </h3>
+              <div class="mt-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="name"
+                    class="block border border-neutral-300 rounded-xl px-3 pb-1 pt-5 w-full text-text-md text-neutral-950 focus:outline-none peer"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    for="name"
+                    class="absolute text-md text-neutral-500 top-4 start-3 z-10 peer-focus:scale-75 scale-75 peer-focus:-translate-y-4 transform -translate-y-4 origin-[0] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:text-neutral-500"
+                    >Name</label
+                  >
+                </div>
+                <p
+                  id="err_text_helper_name"
+                  class="hidden err-text-helper text-accent-red"
+                >
+                  Error Text Helper
+                </p>
+              </div>
+              <div class="mt-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    placeholder=""
+                    class="block border border-neutral-300 rounded-xl px-3 pb-1 pt-5 w-full text-text-md text-neutral-950 focus:outline-none peer"
+                  />
+                  <label
+                    for="phoneNumber"
+                    class="absolute text-md text-neutral-500 top-4 start-3 z-10 peer-focus:scale-75 scale-75 peer-focus:-translate-y-4 transform -translate-y-4 origin-[0] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:text-neutral-500"
+                    >Phone Number</label
+                  >
+                </div>
+                <p
+                  id="errTextHelperPhoneNumber"
+                  class="hidden err-text-helper text-accent-red"
+                >
+                  Error Text Helper
+                </p>
+              </div>
+              <div class="mt-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="city"
+                    placeholder=""
+                    class="block border border-neutral-300 rounded-xl px-3 pb-1 pt-5 w-full text-text-md text-neutral-950 focus:outline-none peer"
+                  />
+                  <label
+                    for="city"
+                    class="absolute text-md text-neutral-500 top-4 start-3 z-10 peer-focus:scale-75 scale-75 peer-focus:-translate-y-4 transform -translate-y-4 origin-[0] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:text-neutral-500"
+                    >City</label
+                  >
+                </div>
+                <p
+                  id="errTextHelperCity"
+                  class="hidden err-text-helper text-accent-red"
+                >
+                  Error Text Helper
+                </p>
+              </div>
+              <div class="mt-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="postalCode"
+                    placeholder=""
+                    class="block border border-neutral-300 rounded-xl px-3 pb-1 pt-5 w-full text-text-md text-neutral-950 focus:outline-none peer"
+                  />
+                  <label
+                    for="postalCode"
+                    class="absolute text-md text-neutral-500 top-4 start-3 z-10 peer-focus:scale-75 scale-75 peer-focus:-translate-y-4 transform -translate-y-4 origin-[0] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:text-neutral-500"
+                    >Postal Code</label
+                  >
+                </div>
+                <p
+                  id="errTextHelperPostalCode"
+                  class="hidden err-text-helper text-accent-red"
+                >
+                  Error Text Helper
+                </p>
+              </div>
+              <div class="mt-4">
+                <div class="relative">
+                  <textarea
+                    id="address"
+                    placeholder=""
+                    rows="4"
+                    class="block border border-neutral-300 rounded-xl px-3 pb-1 pt-5 w-full text-text-md text-neutral-950 focus:outline-none peer"
+                  ></textarea>
+                  <label
+                    for="address"
+                    class="absolute text-md text-neutral-500 top-4 start-3 z-10 peer-focus:scale-75 scale-75 peer-focus:-translate-y-4 transform -translate-y-4 origin-[0] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:text-neutral-500"
+                    >Address</label
+                  >
+                </div>
+                <p
+                  id="errTextHelperAddress"
+                  class="hidden err-text-helper text-accent-red"
+                >
+                  Error Text Helper
+                </p>
+              </div>
+            </div>
+            <div class="border-t mt-2 p-3 border-neutral-300">
+              <h3 class="text-text-md lg:text-text-lg font-bold">
+                Shipping Method
+              </h3>
+              <select
+                name=""
+                id=""
+                class="border rounded-lg w-full p-3 mt-3 border-neutral-300 text-neutral-500"
+              >
+                <option value="">Select Shipping</option>
+              </select>
+            </div>
+            <div class="border-t mt-2 pb-6 p-3 border-neutral-300">
+              <h3 class="text-text-md lg:text-text-lg font-bold">Product</h3>
+              <div class="flex space-x-4 mt-4">
+                <img
+                  src="../assets/images/products/kaos_katun_premium.png"
+                  alt=""
+                  class="w-20 rounded-t-2xl"
+                />
+                <div class="lg:flex lg:justify-between w-full">
+                  <div>
+                    <h3 class="text-text-sm lg:text-text-lg font-bold">
+                      Kaos Katun Premium
+                    </h3>
+                    <span class="text-text-sm lg:text-text-md">T-Shirt</span>
+                  </div>
+                  <p class="text-text-sm lg:text-text-lg font-bold">
+                    1 X Rp1.100.000
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-base-white checkout-form mt-5 rounded-2xl shadow-sm border border-neutral-100 lg:w-[30%] lg:h-full"
+          >
+            <div class="p-3">
+              <h3 class="text-text-md lg:text-text-lg font-bold mb-3 mt-2">
+                Payment Method
+              </h3>
+
+              <div class="inline-flex items-center w-full">
+                <label
+                  class="relative flex items-center cursor-pointer w-full justify-between"
+                  for="bniVA"
+                >
+                  <div class="flex items-center">
+                    <div
+                      class="border h-10 w-10 rounded-lg border-neutral-300 flex items-center justify-center mr-2"
+                    >
+                      <img src="../assets/images/BNI.png" alt="BNI" />
+                    </div>
+                    <span class="text-text-sm lg:text-text-md"
+                      >BNI Virtual Account</span
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      checked
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-neutral-400 checked:border-base-black transition-all checked:bg-base-black"
+                      id="bniVA"
+                    />
+                    <span
+                      class="absolute w-2 h-2 bg-base-white rounded-full opacity-0 top-1.5 left-1.5 peer-checked:opacity-100"
+                    >
+                    </span>
+                  </div>
+                </label>
+              </div>
+
+              <hr class="text-neutral-300 my-3" />
+              <div class="inline-flex items-center w-full">
+                <label
+                  class="relative flex items-center cursor-pointer w-full justify-between"
+                  for="briVA"
+                >
+                  <div class="flex items-center">
+                    <div
+                      class="border h-10 w-10 rounded-lg border-neutral-300 flex items-center justify-center mr-2"
+                    >
+                      <img src="../assets/images/BRI.png" alt="BNI" />
+                    </div>
+                    <span class="text-text-sm lg:text-text-md"
+                      >BRI Virtual Account</span
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-neutral-400 checked:border-base-black transition-all checked:bg-base-black"
+                      id="briVA"
+                    />
+                    <span
+                      class="absolute w-2 h-2 bg-base-white rounded-full opacity-0 top-1.5 left-1.5 peer-checked:opacity-100"
+                    >
+                    </span>
+                  </div>
+                </label>
+              </div>
+              <hr class="text-neutral-300 my-3" />
+              <div class="inline-flex items-center w-full">
+                <label
+                  class="relative flex items-center cursor-pointer w-full justify-between"
+                  for="bcaVA"
+                >
+                  <div class="flex items-center">
+                    <div
+                      class="border h-10 w-10 rounded-lg border-neutral-300 flex items-center justify-center mr-2"
+                    >
+                      <img src="../assets/images/BCA.png" alt="BNI" />
+                    </div>
+                    <span class="text-text-sm lg:text-text-md"
+                      >BCA Virtual Account</span
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-neutral-400 checked:border-base-black transition-all checked:bg-base-black"
+                      id="bcaVA"
+                    />
+                    <span
+                      class="absolute w-2 h-2 bg-base-white rounded-full opacity-0 top-1.5 left-1.5 peer-checked:opacity-100"
+                    >
+                    </span>
+                  </div>
+                </label>
+              </div>
+              <hr class="text-neutral-300 my-3" />
+              <div class="inline-flex items-center w-full">
+                <label
+                  class="relative flex items-center cursor-pointer w-full justify-between"
+                  for="mandiriVA"
+                >
+                  <div class="flex items-center">
+                    <div
+                      class="border h-10 w-10 rounded-lg border-neutral-300 flex items-center justify-center mr-2"
+                    >
+                      <img src="../assets/images/Mandiri.png" alt="BNI" />
+                    </div>
+                    <span class="text-text-sm lg:text-text-md"
+                      >Mandiri Virtual Account</span
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      name="paymentMethod"
+                      type="radio"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-neutral-400 checked:border-base-black transition-all checked:bg-base-black"
+                      id="mandiriVA"
+                    />
+                    <span
+                      class="absolute w-2 h-2 bg-base-white rounded-full opacity-0 top-1.5 left-1.5 peer-checked:opacity-100"
+                    >
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="border-t mt-2 pb-6 p-3 border-neutral-300 space-y-3">
+              <h3 class="text-text-md lg:text-text-lg font-bold">
+                Payment Summary
+              </h3>
+              <div
+                class="flex items-center justify-between text-text-sm lg:text-text-md"
+              >
+                <span>Total Price of Goods</span>
+                <span class="font-bold">Rp1.100.000</span>
+              </div>
+              <div
+                class="flex items-center justify-between text-text-sm lg:text-text-md"
+              >
+                <span>Shipping cost</span>
+                <span class="font-bold">Rp10.000</span>
+              </div>
+              <div
+                class="flex items-center justify-between text-text-sm lg:text-text-md"
+              >
+                <span>Total</span>
+                <span class="font-bold">Rp1.110.000</span>
+              </div>
+              <button
+                class="w-full bg-neutral-950 text-base-white rounded-lg h-12 text-text-md font-semibold"
+              >
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
     </section>
     <!-- Checkout End -->
+
     <!-- Footer Start -->
-    <section id="footer" class="px-4 py-4 lg:px-23 border-t border-neutral-300">
-      <div class="lg:grid lg:grid-cols-3 lg:gap-4 md:gap-1 sm:gap-0 space-y-4">
-        <div class="w-93 space-y-6">
+    <section
+      id="footer"
+      class="px-4 py-10 lg:px-23 border-t border-neutral-300"
+    >
+      <div
+        class="lg:flex lg:justify-between lg:gap-1 md:gap-1 sm:gap-0 space-y-4"
+      >
+        <div class="w-auto space-y-6">
           <div class="logo flex items-center space-x-2">
             <img src="../assets/images/Logo.png" alt="logo" class="w-10" />
             <span class="text-display-xs font-bold text-neutral-950"
@@ -375,7 +696,9 @@
             </div>
           </div>
         </div>
-        <div class="text-text-sm lg:text-text-md flex flex-col space-y-4">
+        <div
+          class="text-text-sm w-full lg:text-text-md flex flex-col space-y-4 lg:ml-10"
+        >
           <p class="font-bold">E-Commerce</p>
           <a class="block" href="#">About Us</a>
           <a class="block" href="#">Terms & Condition</a>
@@ -384,7 +707,9 @@
           >
           <a class="text-text-sm block lg:text-text-md" href="#">Blog</a>
         </div>
-        <div class="text-text-sm lg:text-text-md flex flex-col space-y-4">
+        <div
+          class="text-text-sm w-full lg:text-text-md flex flex-col space-y-4 lg:ml-10"
+        >
           <p class="font-bold">Help</p>
           <a class="block" href="#">How to Transact</a>
           <a class="block" href="#">Payment Method</a>

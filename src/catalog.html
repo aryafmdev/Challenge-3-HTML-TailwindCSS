@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalog Page</title>
     <link rel="stylesheet" href="./css/output.css" />
-    <!-- <style>
-      body * {
-        border: 1px solid yellow;
-      }
-    </style> -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Header Start -->
@@ -28,7 +24,7 @@
                 class="w-10 h-10 mr-2"
               />
               <a
-                href="#home"
+                href="index.html"
                 class="font-bold text-text-lg text-neutral-950 py-5 lg:text-display-xs"
                 >Shirt</a
               >
@@ -36,7 +32,8 @@
             <!-- Search Container -->
             <div class="flex items-center space-x-4">
               <!-- Catalog Button -->
-              <button
+              <a
+                href="catalog.html"
                 class="flex items-center space-x-2 px-2 py-2 text-gray-700 hover:text-gray-900 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors duration-200"
               >
                 <svg
@@ -53,7 +50,7 @@
                   />
                 </svg>
                 <span class="text-text-sm text-neutral-950">Catalog</span>
-              </button>
+              </a>
 
               <!-- Search Bar -->
               <div class="relative flex-1 max-w-lg">
@@ -107,7 +104,7 @@
                 <span
                   id="cart-badge"
                   class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
-                  >1</span
+                  >6</span
                 >
               </button>
               <!-- User -->
@@ -335,41 +332,170 @@
       <div class="lg:grid grid-cols-[1fr_3fr] gap-4 mt-4">
         <!-- Filter Section Start -->
         <div class="hidden lg:block">
-          <div class="w-auto border rounded-xl shadow-md bg-white">
+          <div
+            class="w-auto border rounded-xl border-neutral-300 shadow-md bg-white"
+          >
             <h2 class="text-md font-bold p-4">FILTER</h2>
 
             <!-- Categories Section -->
-            <div class="border-b px-4 pb-4">
+            <div class="border-b border-neutral-300 px-4 pb-4">
               <p class="font-semibold mb-2">Categories</p>
-              <div class="space-y-2">
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" checked />
-                  <span>All</span>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
-                  <span>Shoes</span>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
-                  <span>Clothes</span>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
-                  <span>Accessories</span>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
-                  <span>Accessories</span>
-                </label>
+              <div class="flex flex-col space-y-2">
+                <div class="inline-flex items-center">
+                  <label class="flex items-center cursor-pointer relative">
+                    <div class="checkbox inline-flex items-center h-5">
+                      <label class="flex items-center cursor-pointer relative">
+                        <input
+                          type="checkbox"
+                          checked
+                          class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                          id="all"
+                        />
+                        <span
+                          class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3.5 w-3.5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </label>
+                  <span class="pl-3">All</span>
+                </div>
+                <div class="inline-flex items-center">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="shoes"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                  <span class="pl-3">Shoes</span>
+                </div>
+                <div class="inline-flex items-center">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="clothes"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                  <span class="pl-3">Clothes</span>
+                </div>
+                <div class="inline-flex items-center">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                  <span class="pl-3">Accessories</span>
+                </div>
+                <div class="inline-flex items-center">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
+                  <span class="pl-3">Accessories</span>
+                </div>
               </div>
             </div>
 
             <!-- Price Section -->
-            <div class="p-4 border-b">
+            <div class="p-4 border-b border-neutral-300">
               <p class="font-semibold">Price</p>
               <div class="space-y-2 mt-2">
-                <div class="flex items-center border p-1 rounded-lg">
+                <div
+                  class="flex items-center border border-neutral-300 p-1 rounded-lg"
+                >
                   <span class="mr-2 bg-gray-200 p-2 rounded-lg">Rp</span>
                   <input
                     type="text"
@@ -377,7 +503,9 @@
                     class="text-sm w-full border-none p-1 rounded"
                   />
                 </div>
-                <div class="flex items-center border p-1 rounded-lg mt-2">
+                <div
+                  class="flex items-center border border-neutral-300 p-1 rounded-lg mt-2"
+                >
                   <span class="mr-2 bg-gray-200 p-2 rounded-lg">Rp</span>
                   <input
                     type="text"
@@ -391,37 +519,158 @@
             <!-- Rating Section -->
             <div class="p-4">
               <p class="font-semibold">Rating</p>
-              <div class="space-y-2 mt-2">
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
+              <div class="flex flex-col space-y-3 mt-2">
+                <div class="inline-flex items-center h-5">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
                   <p class="text-md">
-                    <span class="text-orange-400 text-md">&#9733;</span> 5
+                    <span class="pl-3 text-orange-400 text-xl">&#9733;</span> 5
                   </p>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
+                </div>
+                <div class="inline-flex items-center h-5">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="rating2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
                   <p class="text-md">
-                    <span class="text-orange-400 text-md">&#9733;</span> 4
+                    <span class="pl-3 text-orange-400 text-xl">&#9733;</span> 4
                   </p>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
+                </div>
+                <div class="inline-flex items-center h-5">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
                   <p class="text-md">
-                    <span class="text-orange-400 text-md">&#9733;</span> 3
+                    <span class="pl-3 text-orange-400 text-xl">&#9733;</span> 3
                   </p>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
+                </div>
+                <div class="inline-flex items-center h-5">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
                   <p class="text-md">
-                    <span class="text-orange-400 text-md">&#9733;</span> 2
+                    <span class="pl-3 text-orange-400 text-xl">&#9733;</span> 2
                   </p>
-                </label>
-                <label class="flex items-center">
-                  <input type="checkbox" class="mr-2" />
+                </div>
+                <div class="inline-flex items-center h-5">
+                  <label class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-neutral-400 checked:bg-neutral-800 checked:border-neutral-800"
+                      id="accessories2"
+                    />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3.5 w-3.5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  </label>
                   <p class="text-md">
-                    <span class="text-orange-400 text-md">&#9733;</span> 1
+                    <span class="pl-3 text-orange-400 text-xl">&#9733;</span>
+                    1
                   </p>
-                </label>
+                </div>
               </div>
             </div>
           </div>
@@ -438,7 +687,7 @@
               >
                 <div class="flex justify-between">
                   <p>Filter</p>
-                  <img src="/assets/images/Filter.svg" alt="filter" />
+                  <img src="../assets/images/Filter.svg" alt="filter" />
                 </div>
               </button>
               <p class="hidden text-sm lg:flex lg:w-auto">
@@ -453,7 +702,7 @@
               >
                 <div class="flex justify-between">
                   <p>Latest</p>
-                  <img src="/assets/images/Arrow.svg" alt="sort" />
+                  <img src="../assets/images/Arrow.svg" alt="sort" />
                 </div>
               </button>
             </div>
@@ -463,23 +712,27 @@
           <div
             class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 mt-4"
           >
-            <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
-              <img
-                src="/assets/images/products/sneakers_court_minimalis.png"
-                alt="sneakers-court-minimalis"
-                class="w-full h-auto rounded-lg"
-              />
-              <div class="max-w p-4 flex flex-col gap-2 lg:p-1">
-                <h3 class="text-sm lg:text-xs">Sneakers Court Minimalis</h3>
-                <p class="text-sm"><strong>Rp275.000</strong></p>
-                <p class="text-sm">
-                  <span class="text-orange-400 text-xl">&#9733;</span> 4.9
-                </p>
+            <a href="detail.html" class="hreff">
+              <div
+                class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden"
+              >
+                <img
+                  src="../assets/images/products/sneakers_court_minimalis.png"
+                  alt="sneakers-court-minimalis"
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="max-w p-4 flex flex-col gap-2 lg:p-1">
+                  <h3 class="text-sm lg:text-xs">Sneakers Court Minimalis</h3>
+                  <p class="text-sm"><strong>Rp275.000</strong></p>
+                  <p class="text-sm">
+                    <span class="text-orange-400 text-xl">&#9733;</span> 4.9
+                  </p>
+                </div>
               </div>
-            </div>
+            </a>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/kaos_crewneck_esensial.png"
+                src="../assets/images/products/kaos_crewneck_esensial.png"
                 alt="kaos-crewneck-esensial"
                 class="w-full h-auto rounded-lg"
               />
@@ -493,7 +746,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/tas_selempang_klasik.png"
+                src="../assets/images/products/tas_selempang_klasik.png"
                 alt="tas-selempang-klasik"
                 class="w-full h-auto rounded-lg"
               />
@@ -507,7 +760,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/kaos_soft_touch.png"
+                src="../assets/images/products/kaos_soft_touch.png"
                 alt="kaos-soft-touch"
                 class="w-full h-auto rounded-lg"
               />
@@ -521,7 +774,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/overshirt_utility.png"
+                src="../assets/images/products/overshirt_utility.png"
                 alt="overshirt-utility"
                 class="w-full h-auto rounded-lg"
               />
@@ -535,7 +788,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/sweater_rajut_cable.png"
+                src="../assets/images/products/sweater_rajut_cable.png"
                 alt="sweater-rajut-cable"
                 class="w-full h-auto rounded-lg"
               />
@@ -549,7 +802,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/syal_wol_kotak.png"
+                src="../assets/images/products/syal_wol_kotak.png"
                 alt="syal_wol_kotak"
                 class="w-full h-auto rounded-lg"
               />
@@ -563,7 +816,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/syal_wol_solid.png"
+                src="../assets/images/products/syal_wol_solid.png"
                 alt="syal_wol_solid"
                 class="w-full h-auto rounded-lg"
               />
@@ -577,7 +830,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/celana_panjang_tailored.png"
+                src="../assets/images/products/celana_panjang_tailored.png"
                 alt="celana_panjang_tailored"
                 class="w-full h-auto rounded-lg"
               />
@@ -591,7 +844,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/sneakers_harian.png"
+                src="../assets/images/products/sneakers_harian.png"
                 alt="sneakers_harian"
                 class="w-full h-auto rounded-lg"
               />
@@ -605,7 +858,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/jaket_puffer_quilted.png"
+                src="../assets/images/products/jaket_puffer_quilted.png"
                 alt="jaket_puffer_quilted"
                 class="w-full h-auto rounded-lg"
               />
@@ -619,7 +872,7 @@
             </div>
             <div class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
               <img
-                src="/assets/images/products/kemeja_oxford.png"
+                src="../assets/images/products/kemeja_oxford.png"
                 alt="kemeja_oxford"
                 class="w-full h-auto rounded-lg"
               />
@@ -635,7 +888,7 @@
               class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden lg:hidden"
             >
               <img
-                src="/assets/images/products/celana_pendek_chino.png"
+                src="../assets/images/products/celana_pendek_chino.png"
                 alt="celana_pendek_chino"
                 class="w-full h-auto rounded-lg"
               />
@@ -651,7 +904,7 @@
               class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden lg:hidden"
             >
               <img
-                src="/assets/images/products/topi_baseball_6-panel.png"
+                src="../assets/images/products/topi_baseball_6-panel.png"
                 alt="topi-baseball-6-panel"
                 class="w-full h-auto rounded-lg"
               />
@@ -667,7 +920,7 @@
               class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden lg:hidden"
             >
               <img
-                src="/assets/images/products/kaos_katun_premium.png"
+                src="../assets/images/products/kaos_katun_premium.png"
                 alt="kaos-katun-premium"
                 class="w-full h-auto rounded-lg"
               />
@@ -683,7 +936,7 @@
               class="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden lg:hidden"
             >
               <img
-                src="/assets/images/products/hoodie_pullover_fleece.png"
+                src="../assets/images/products/hoodie_pullover_fleece.png"
                 alt="hoodie-pullover-fleece"
                 class="w-full h-auto rounded-lg"
               />
